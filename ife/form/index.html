@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./index.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .litter{
+            width: 60%;
+            margin: 50px auto 0;
+            /*text-align: center;*/
+        }
+
+        .input{
+            width: 300px;
+            height: 30px;
+            border: 1px solid gray;
+        }
+
+        .btn{
+            width: 60px;
+            height: 32px;
+            background-color: rgb(77, 122, 250);
+            border:1px #fff solid;
+            cursor: pointer;
+
+        }
+
+        .tips{
+            text-indent: 103px;
+            margin-top: 5px;
+            height: 20px;
+        }
+
+        .length,.password,.conpwd,.email{
+            margin-bottom: 50px;
+        }
+
+        .test{
+            display: inline-block;
+            width: 100px;
+        }
+
+        .title{
+            float: right;
+        }
+
+        .con{
+            display: inline-block;
+            margin-right: -30px;
+            padding-right: 30px;
+        }
+
+        .con2{
+            margin-right: -30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" class="litter">
+        <div class="length">
+            <label for="">
+                <div class="test">
+                    <span class="title">名称：</span>                                    
+                </div>
+                <input type="text" class="input">
+                <button class="btn">验证</button>
+            </label>
+            <h6 class="tips"></h6>
+        </div>
+
+        <div class="password">
+            <label for="">
+                <div class="test">
+                    <span class="title">密码：</span>                                    
+                </div>
+                <input type="text" class="input">
+                <button class="btn">验证</button>
+            </label>
+            <h6 class="tips"></h6>
+        </div>
+
+        <div class="conpwd">
+            <label for="">
+                <div class="test">
+                    <span class="title">确认密码：</span>                                    
+                </div>                                    
+                <input type="text" class="input" disabled="">
+                <button class="btn">验证</button>
+            </label>
+            <h6 class="tips"></h6>
+        </div>
+
+        <div class="email">
+            <label for="">
+                <div class="test">
+                    <span class="title">邮箱：</span>                                    
+                </div>
+                <input type="text" class="input">
+                <button class="btn">验证</button>
+            </label>
+            <h6 class="tips"></h6>
+        </div>
+
+        <div class="phone">
+            <label for="">
+                <div class="test">
+                    <span class="title">手机：</span>                                    
+                </div>
+                <input type="text" class="input">
+                <button class="btn">验证</button>
+            </label>
+            <h6 class="tips"></h6>
+        </div>
+    </form>
+</body>
+</html>

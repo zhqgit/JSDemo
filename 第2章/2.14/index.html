@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>2.14节,回车提交</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<h2>回车提交</h2>
+<input type="text" id="enterSubmit" value="回车提交">
+<script type="text/javascript">
+    window.onload = function(){
+        document.getElementById("enterSubmit").onkeyup = function(e){
+            //e的解释
+            //在标准的流程中， 事件对象e  默认由事件句柄函数的第一个参数传入，供处理函数使用
+            //在老版 IE 中，这个事件对象却无法直接由句柄函数传入，反而可以使用一个全局变量来代表事件对象，这个变量即 window.event
+            //所以，下面这句其实是兼容性的写法
+            e = e || window.event;
+
+            //这句也是兼容性的写法
+            //IE只有keyCode属性，FireFox中有which和charCode属性，Opera中有keyCode和which属性，Chrome中有keyCode、which和charCode属性。
+            var keycode = e.keyCode || e.which ||e.charCode;
+
+            //13是回车enter的键码
+            if(keycode === 13){
+                alert("回车提交成功");
+            }
+
+            //其他重要的键码
+            //37--Left  38--Up  39--Right  40--down
+
+
+            //触发一个按键事件的要素
+            //获得事件对象e
+            //获得事件对象e.keycode
+            //判断keycode的值
+
+        }
+    };
+</script>
+</body>
+</html>

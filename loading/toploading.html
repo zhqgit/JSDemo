@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+        .loading{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .pic{
+            position: absolute;
+            height: 5px;
+            width: 0%;
+            background: red;
+            top: 0;
+            left: 0;
+        }
+    </style>
+
+    <script src="./jquery-3.1.1.min.js"></script>
+    <scriptsript>
+        document.onreadystatechange =function(){
+            if(document.readyState == 'complete'){
+                $('.loading').fadeOut();
+            }
+        }
+  scriptsript>-->
+</head>
+<body>
+        <div class="loading">
+            <div class="pic"></div>
+        </div>
+
+
+    <header>
+        <img src="http://img0.imgtn.bdimg.com/it/u=935177437,669752543&fm=26&gp=0.jpg" alt="">
+        <img src="http://pic.qiantucdn.com/58pic/22/31/33/05M58PICtxY_1024.jpg" alt="">
+    </header>
+
+    <script>
+        $('.loading .pic').animate({width:"10%"},100)
+    </script>
+
+    <section class="banner">
+        <img src="http://pic.qiantucdn.com/58pic/22/31/33/05M58PICtxY_1024.jpg" alt="">
+        <img src="http://pic.58pic.com/58pic/16/00/52/11J58PICD3S_1024.jpg" alt="">
+    </section>
+
+    <script>
+        $('.loading .pic').animate({width:"30%"},100)
+    </script>
+
+    <section class="about">
+        <img src="http://tupian.enterdesk.com/2013/mxy/12/11/4/2.jpg" alt="">
+        <img src="http://pic.90sjimg.com/back_pic/u/00/02/82/06/561b457215461.jpg" alt="">  
+    </section>
+
+    <script>
+        $('.loading .pic').animate({width:"50%"},100)
+    </script>
+
+    <section class="pro">
+        <img src="http://tupian.enterdesk.com/2013/mxy/12/11/4/2.jpg" alt="">
+        <img src="http://pic.90sjimg.com/back_pic/u/00/02/82/06/561b457215461.jpg" alt="">
+    </section>
+
+    <section class="news">
+        <img src="http://tupian.enterdesk.com/2013/mxy/12/11/4/2.jpg" alt="">
+        <img src="http://pic.90sjimg.com/back_pic/u/00/02/82/06/561b457215461.jpg" alt="">  
+    </section>
+
+    <script>
+        $('.loading .pic').animate({width:"80%"},100)
+    </script>
+
+    <footer>
+        <img src="http://tupian.enterdesk.com/2013/mxy/12/11/4/2.jpg" alt="">
+        <img src="http://pic.90sjimg.com/back_pic/u/00/02/82/06/561b457215461.jpg" alt="">
+    </footer>
+
+    <script>
+        $('.loading .pic').animate({width:"100%"},100,function(){
+            $('.loading').fadeOut();
+        })
+    </script>
+</body>
+</html>

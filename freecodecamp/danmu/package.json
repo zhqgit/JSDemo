@@ -1,0 +1,10 @@
+{
+  "name": "danmu",
+  "version": "0.0.1",
+  "presets": [
+    "es2015"
+  ],
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
+}

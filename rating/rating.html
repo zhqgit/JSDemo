@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body,
+        ul,
+        li {
+            padding: 0;
+            margin: 0;
+        }
+
+        .rating {
+            width: 500px;
+            height: 32px;
+            margin: 100px auto;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .rating-item {
+            float: left;
+            margin: 0 5px;
+            width: 32px;
+            height: 32px;
+            background: url(star.png) no-repeat;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="rating" id="rating">
+        <li class="rating-item" title="很不好"></li>
+        <li class="rating-item" title="不好"></li>
+        <li class="rating-item" title="一般"></li>
+        <li class="rating-item" title="好"></li>
+        <li class="rating-item" title="很好"></li>
+
+
+    </ul>
+
+    <ul class="rating1" id="rating1">
+        <li class="rating-item" title="很不好"></li>
+        <li class="rating-item" title="不好"></li>
+        <li class="rating-item" title="一般"></li>
+        <li class="rating-item" title="好"></li>
+        <li class="rating-item" title="很好"></li>
+
+
+    </ul>
+
+    <script src="./jquery-3.1.1.min.js"></script>
+    <script>
+        //使用闭包解决全局变量的问题
+        var rating = (function () {
+
+            //要充分烤炉函数复用的问题
+            function lightOnStar($item, num) {
+                $item.each(function (index) {
+                    if (index < num) {
+                        $(this).css({ 'background-position': '0 -32px' });
+                    } else {
+                        $(this).css({ 'background-position': '0 0' });
+                    }
+                })
+            }
+            var init = function (el, num) {
+                var $rating = $(el),
+                    $item = $rating.find('.rating-item');
+                lightOnStar($item, num);
+
+                //给每个item都绑定事件太冗余繁杂，所以使用事件委托机制
+                //将子元素触发的事件绑定在父元素上(因为事件冒泡，所以子元素发生了的事件父元素是可以知道的 )
+                $rating.on('mouseover', '.rating-item', function () {
+                    lightOnStar($item, $(this).index() + 1);
+                }).on('click', '.rating-item', function () {
+                    num = $(this).index() + 1;
+                }).on('mouseout', function () {
+                    lightOnStar($item, num);
+                });
+
+            }
+
+            //将这段函数封装为插件
+            $.fn.extend({
+                rating:function(num){
+                            //使用this.each而不使用this是因为$()有时可能获取的是一组而不是一个
+                    return this.each(function(){
+                        init(this,num);
+                    })
+                }
+            })
+
+            return {
+                init: init
+            };
+        })();
+
+        rating.init('#rating', 2);
+        // rating.init('#rating1', 3);
+        $('#rating1').rating(1);
+    </script>
+</body>
+
+</html>

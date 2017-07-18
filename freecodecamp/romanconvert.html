@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function raisePower(x, y) {
+            return Math.pow(x, y)
+        }
+
+        function convert(num) {
+            //转换的要点
+            //将一个数按位拆分 如1998 = 1000 + 900 + 90 + 8
+
+            //判断是整数还是负数,使用一个变量记录            
+            var pos = 1;
+            if (num < 0) {
+                num = Math.abs(num);
+                pos = 0;
+            }
+
+            var number = new Number(num);
+            //数字转换成字符串
+            var total = number.toString();
+
+            //拆分字符串
+            //如果是负数的话使用total.split函数将得到  ["-", "1", "2", "3", "3", "6"]
+            var numArr = total.split("", total.length);
+
+            var time = 0;
+            var ret = 0;
+            var str = '';
+            for (var i = numArr.length; i > 0; i--) {
+                ret = ret + numArr[i - 1] * raisePower(10, time);
+                time++;
+
+                switch(time){
+                    case 0:
+                        switch(numArr[i-1]){
+                            case 0:
+                                str = str + '';
+                                break;
+                            case 1:
+                                str = str + 'I';
+                                break;
+                            case 2:
+                                str = str + 'II';
+                                break;
+                            case 3:
+                                str = str + 'III';
+                                break;
+                            case 4:
+                                str = str + 'IV';
+                                break;
+                            case 5:
+                                str = str + 'V';
+                                break;
+                            case 6:
+                                str = str + 'VI';
+                                break;
+                            case 7:
+                                str = str + 'VII';
+                                break;
+                            case 8:
+                                str = str + 'VIII';
+                                break;
+                            case 9:
+                                str = str + 'IX';
+                                break;
+                        }
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    default:
+                    
+                }
+
+            }
+
+
+
+
+
+            if (pos == 0) {
+                console.log(-ret);
+            } else {
+                console.log(ret);
+            }
+
+            console.log(numArr);
+
+            // return num;
+        }
+
+        convert(-12336);
+    </script>
+</body>
+
+</html>

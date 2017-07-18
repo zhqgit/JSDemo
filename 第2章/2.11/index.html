@@ -1,0 +1,80 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>2.11节,显示输入提示，获取焦点提示取消</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+    <h2>显示输入提示，获取焦点提示取消</h2>
+    <input type="text" name="info" placeholder="html5提示信息" />
+    <input id='hintInput' data-hint='我是提示信息' type='password' value=''>
+    <script type="text/javascript">
+        window.onload = function () {
+            var setCss = function (_this, cssOption) { //设置样式
+
+                //3文本节点   8注释节点
+                if (!_this || _this.nodeType === 3 || _this.nodeType === 8 || !_this.style) {
+                    return;
+                }
+                for (var cs in cssOption) {
+                    //for in适合遍历对象属性
+                    _this.style[cs] = cssOption[cs];
+                }
+                return _this;
+            },
+                //获得第二个输入框的节点
+                hintInput = document.getElementById("hintInput"),
+                //创建一个span元素
+                _span = document.createElement("span"),
+
+                //得到data-hint的属性值
+                dataHint = hintInput.getAttribute("data-hint");
+
+                //将提示信息添加到span元素上面
+            _span.innerText = dataHint;
+
+            //为节点设置样式   _span.nodeType = 1;
+            //把css样式作为一个对象传给函数（具有属性和属性值键值对，适合for in循环遍历）
+            setCss(_span, {
+                "position": "absolute",
+                //input元素相对于html元素的距离
+                "left": hintInput.offsetLeft + 2,
+                "top": hintInput.offsetTop,
+                "zIndex": 2
+            });
+            _span.className = "hintInput";
+            hintInput.value = "";
+            _span.setAttribute("id", "hint0");
+
+            //parentNode返回某节点的父节点
+
+            //Node.insertBefore() 方法，在当前节点的某个子节点之前再插入一个子节点
+
+            //这段代码的意思是，hintInput的父节点作为新插入元素_span元素的父节点
+            //并且在hintInput节点之前插入_span节点
+
+            //需要特别注意的一点是，使用insertBefore方法必须是被插入元素的父元素
+            hintInput.parentNode.insertBefore(_span, hintInput);
+
+            var onhint = function (e) { //隐藏元素
+                setCss(_span, {
+                    "display": "none"
+                });
+                hintInput.focus();
+            };
+            hintInput.onblur = function (e) { //失去焦点显示元素
+                //(\s|\u00A0)  匹配\s或者\u00A0, ^n表示开头为n,n+表示至少一个n   n+$表示至少一个n结尾
+                if (!hintInput.value.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g, "")) {
+                    setCss(_span, {
+                        "display": "block"
+                    });
+                }
+
+            };
+            _span.onclick = hintInput.onfocus = onhint; //单击事件与获取焦点事件使用同一个函数处理
+        };
+    </script>
+</body>
+
+</html>

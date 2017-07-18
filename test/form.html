@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="index.js"></script>
+    <title>Document</title>
+    <style>
+        .msg{
+            margin: -22px 0 0 250px;
+        }
+        #count{
+            visibility: hidden;
+        }
+        .row{
+            margin-bottom: 20px;
+        }
+        .success{
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin-right: 5px;
+            background: url(success.png);
+        }
+        .ati{
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin-right: 5px;
+            background: url(attention.png);
+        }
+        .err{
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin-right: 5px;
+            background: url(err.png);
+        }
+
+        em{
+            width: 50px;
+            height: 20px;
+            background: #ff8686;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .active{
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="row">
+            <label for="">
+                <span>会员名:</span>
+                <input type="text" class="text">
+            </label>
+            <p class="msg">
+            </p>
+        </div>
+        <div>
+            <label for="">
+                <span></span>
+                <b id="count"></b>
+            </label>
+        </div>
+
+        <div class="row">
+            <label for="">
+                <span>登录密码:</span>
+                <input type="password" class="text">
+            </label>
+            <p class="msg">
+            </p>
+        </div>
+        <div>
+            <label for="">
+            <span></span>
+            <em class="active">弱</em>
+            <em>中</em>
+            <em>强</em>
+        </label>
+        </div>
+
+        <div class="row">
+            <label for="">
+                <span>确认密码:</span>
+                <input type="password" class="text" disabled="">
+            </label>
+            <p class="msg">
+            </p>
+        </div>
+        <div><label for=""><span></span><b>0个字符</b></label></div>
+
+        <div>
+            <span>验证码</span>
+            <input type="text">
+            <p>dd</p>
+        </div>
+    </form>
+</body>
+
+</html>

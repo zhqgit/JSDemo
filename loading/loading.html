@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.1.1.min.js"></script>
+    <script>
+        document.onreadystatechange = function(){
+            console.log(document.readyState);
+
+            if(document.readyState == 'complete'){
+                $('.loading').fadeOut();
+            }
+        }
+    </script>
+
+    <style>
+        .loading{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        .pic{
+            background: url(loading.gif);
+            width: 64px;
+            height: 64px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading"><div class="pic"></div></div>
+    <img src="http://img0.imgtn.bdimg.com/it/u=935177437,669752543&fm=26&gp=0.jpg" alt="">
+    <img src="http://pic.qiantucdn.com/58pic/22/31/33/05M58PICtxY_1024.jpg" alt="">
+    <img src="http://pic.58pic.com/58pic/16/00/52/11J58PICD3S_1024.jpg" alt="">
+    <img src="http://tupian.enterdesk.com/2013/mxy/12/11/4/2.jpg" alt="">-->
+    <img src="http://pic.90sjimg.com/back_pic/u/00/02/82/06/561b457215461.jpg" alt="">
+</body>
+</html>

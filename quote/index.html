@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+
+        body {
+            background: rgb(189, 187, 153);
+            color: rgb(189, 187, 153);
+        }
+
+        .content {
+            width: 38%;
+            height: 350px;
+            margin: 100px auto 5px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 1%;
+        }
+
+        .quote {
+            width: 80%;
+            text-align: center;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            /*font-weight: 600;*/
+            margin: 0 auto;
+        }
+
+        .author {
+            /*float: right;*/
+            font-size: 18px;
+            text-indent: 436px;
+            /*width: 100px;*/
+            /*width: 25%;*/
+            margin-top: 40px;
+        }
+
+        .twitter {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(189, 187, 153);
+            float: left;
+            color: #fff;
+            margin-right: 10px;
+            border-radius: 2%;
+            margin-top: 30px;
+        }
+
+        .new-quote {
+            height: 40px;
+            width: 100px;
+            background-color: rgb(189, 187, 153);
+            color: #fff;
+            float: right;
+            padding: 5px;
+            border-radius: 5%;
+            margin-top: 30px;
+            border:1px #fff solid;
+            cursor: pointer;         
+        }
+
+        /*.clearfix{
+            width: 100%;
+        }*/
+
+        /*.clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden
+        }*/
+    </style>
+
+</head>
+
+<body>
+    <div class="content">
+        <h1 class="quote" id="quote">Not everything that can be counted counts, and not everything that counts can be counted.</h1>
+        <h6 class="author" id="author">- Albert Einstein</h6>
+
+        <div class="twitter"></div>
+        <div class="twitter"></div>
+
+        <button class="new-quote" id="newBtn">New quote</button>
+    </div>
+
+    <script>
+        //两个一维数组，一个是颜色，一个是quote,每次随机获取一个
+
+        //一维数组里包含body的background-color属性，body的color属性
+
+        //background-color和color的颜色是相同的
+
+        //但是两个颜色和quote的内容是不用绑定在一起的
+
+
+        //quote的内容和作者，绑定在一起
+
+        //按钮每点击一次，就随机获取一个一维数组
+
+
+        window.onload =function(){
+            var randomArrColor = ['#81c2d6','#8192d6','#d9b3e6','dcf7a1'];
+
+            var randomArrQuote = ['nana','haha','xixi','biubiu'];
+
+            var newQuote = document.getElementById('newBtn');
+
+            newQuote.onclick =function(){
+
+                //获得两个随机数
+
+                var randQuote = Math.floor(Math.random()*4);
+
+                var randColor = Math.floor(Math.random()*4);
+
+                console.log(randQuote);
+                console.log(randColor);            
+
+                //修改body的背景颜色和字体颜色
+                document.body.style.backgroundColor = randomArrColor[randColor];
+                document.body.style.color = randomArrColor[randColor];
+
+                //修改名言的内容
+                var quoteContent = document.getElementById('quote');
+                var quoteAuthor = document.getElementById('author');
+
+                quoteContent.innerText = randomArrQuote[randQuote];
+                quoteAuthor.innerText = randomArrQuote[randQuote];
+                
+                var twitters = document.getElementsByClassName('twitter');
+
+                twitters[0].style.backgroundColor = randomArrColor[randColor];
+                twitters[1].style.backgroundColor = randomArrColor[randColor];
+                
+                newQuote.style.backgroundColor = randomArrColor[randColor];
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*ul,h1{
+            margin: 0;
+        }*/
+
+        #box {
+            width: 400px;
+            /*height: 190px;*/
+            /*position: absolute;
+            top: 50%;
+            left: 50%;*/
+            /*translate(X,Y)   X,Y都为正数时表示向右下移动*/
+            /*X,Y值为百分数时以移动的元素长度和高度为百分数的基值*/
+            /*transform: translate(-50%, -50%);*/
+            margin: 50px auto 0;
+            background-color: gray;
+        }
+
+        .title {
+            background-color: blue;
+        }
+
+        #rollbox {
+            height: 120px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h1 class="title">慕课网最新教程</h1>
+        <div id="rollbox">
+            <ul class="icon1" id="icon1">
+                <li>111</li>
+                <li>111</li>
+                <li>111</li>
+                <li>111</li>
+                <li>111</li>
+                <li>111</li>
+                <li>111</li>
+                <li>111</li>
+            </ul>
+
+            <ul class="icon2"></ul>
+        </div>
+    </div>
+    <script>
+        var rollbox = document.getElementById('rollbox');
+        rollbox.scrollTop = 0;
+        var time = 50;
+
+        var aUl = document.getElementsByTagName('ul'),
+            icon1 = aUl[0],
+            icon2 = aUl[1];
+
+        icon2.innerHTML = icon1.innerHTML;
+
+         //当rollbox滚动的高度等于icon1.offsetHeight时，那么就让rollbox.scrollTop = 0;
+        function scrollUp() {
+            if (rollbox.scrollTop >= icon1.offsetHeight) {
+                rollbox.scrollTop = 0;
+            } else {
+                rollbox.scrollTop++;
+            }
+        }
+
+
+
+       
+        var time = 50;
+        //在外层加window.onload 导致报错 iconFirst is not defined
+        var myscroll = setInterval("scrollUp()", time);
+
+        rollbox.onmouseover = function(){
+            clearInterval(myscroll);
+        }
+
+        rollbox.onmouseout =function(){
+            myscroll = setInterval("scrollUp()", time);
+
+            //如果是setInterval("scrollUp()", time); 速度会变得很快，为什么？
+        }
+    </script>
+</body>
+
+</html>
