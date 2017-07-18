@@ -5,13 +5,27 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="hello"></div>
+<div class="hello"></div>
 
-    <button>A</button>
-    <button>B</button>
-    <button>C</button>
-    <button>D</button>
+<button class="btn">A</button>
+<button class="btn">B</button>
+<button class="btn">C</button>
+<button class="btn">D</button>
+
+<h1 id="output"></h1>
 <script src="scripts/array.js"></script>
+<script>
+    window.onload = function () {
+        var buttons = document.querySelectorAll('.btn');
+        var out = document.querySelector('#output');
+
+        for (var i = 0; i < buttons.length; ++i) {
+            buttons[i].addEventListener('click', function (e) {
+                out.innerText = buttons[i].innerText;
+            },false);
+        }
+    }
+</script>
 <!--<script src="scripts/test.js"></script>-->
 </body>
 </html>
