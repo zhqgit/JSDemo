@@ -1,40 +1,6 @@
-<img src="http://images.china-pub.com/ebook3800001-3805000/3804034/zcover.jpg" alt="超实用的JS代码段" title="超实用的JS代码段" width="200" />
-###《超实用的JS代码段》
-___________________________
 
-	作者 ：席新亮
-	QQ   ：939898101
-	邮箱 ：939898101@qq.com
-	新浪微博 ： 席新亮_JavaScript_HTML5  
-___________________________
 
-###[点击访问·书评交流区域](http://xixinliang.lofter.com/post/333fbe_24cd4ca "访问书评交流区域")
-
-### 本书包括以下内容
-
-#####序1  30个简单的趣味JavaScript代码
-#####序2  30个你不可能全部会做的JavaScript题目
-#####序3  30个2014年最火热的JavaScript面试题
-
-####第1章  JavaScript必须知道的事儿
-* 1.1  如何在HTML中调用JavaScript代码
-* 1.1.1  \<script\>标签的定义
-* 1.1.2  两种嵌入JavaScript代码的方式
-* 1.1.3  XHTML与HTML对JavaScript解析的不同之处
-* 1.1.4  \<noscript\>如何用
-* 1.2  使用什么工具开发JavaScript
-* 1.2.1  Adobe Dreamweaver软件，推荐指数：3
-* 1.2.2  SublimeText，推荐指数：4
-* 1.2.3  AptanaStudio，推荐指数：4
-* 1.2.4  WebStorm，推荐指数：4.5
-* 1.3  如何在不同浏览器中调试JavaScript代码
-* 1.3.1  WebInspector调试工具
-* 1.3.2  Firebug调试工具
-* 1.3.3  JavaScript调试器
-* 1.3.4  控制台
-* 1.3.5  HTTP分析
-* 1.3.6  性能检测
-* 1.4  总结
+### 章节部分代码来源于《超实用的JS代码段》，其余的是自己写的
 
 ####第2章  表单常用代码
 * 2.1  去除字符串左右两边的空格
@@ -207,13 +173,3 @@ ___________________________
 * 9.10  等级星投票效果
 * 9.11  IE导出表格
 
-=================================
-
-####书籍点击购买地址:
-
-[互动出版网](http://product.china-pub.com/3804034?ref=xilie "访问-超实用的JS代码段")  
-[京东商城](http://item.jd.com/1267770060.html "访问-超实用的JS代码段")  
-[亚马逊](http://www.amazon.cn/%E8%B6%85%E5%AE%9E%E7%94%A8%E7%9A%84JavaScript%E4%BB%A3%E7%A0%81%E6%AE%B5-%E5%B8%AD%E6%96%B0%E4%BA%AE/dp/B00N7YKWBS/ref=sr_1_1?ie=UTF8&qid=1409648740&sr=8-1&keywords=%E8%B6%85%E5%AE%9E%E7%94%A8%E7%9A%84JavaScript "访问-超实用的JS代码段")  
-
-####前端学习社区推荐:
-[前端范 - 前端人的快速响应问答社区](http://qianduanfan.com/ "访问-前端范 - 前端人的快速响应问答社区，汇聚了大量的前端工程师，为前端爱好者提供一流的资讯、技术交流、资源下载！")  
