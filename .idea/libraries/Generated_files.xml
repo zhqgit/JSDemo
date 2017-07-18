@@ -8,6 +8,7 @@
         <item url="file://$PROJECT_DIR$/dist/test/es6/scripts/index.js" />
         <item url="file://$PROJECT_DIR$/dist/test/es6/scripts/binary.js" />
         <item url="file://$PROJECT_DIR$/dist/freecodecamp/danmu/scripts/test.js" />
+        <item url="file://$PROJECT_DIR$/dist/test/es6/scripts/entrust.js" />
         <item url="file://$PROJECT_DIR$/dist/freecodecamp/danmu/scripts/danmu.js" />
         <item url="file://$PROJECT_DIR$/dist/test/es6/scripts/dates.js" />
         <item url="file://$PROJECT_DIR$/dist/test/es6/scripts/array.js" />
@@ -16,17 +17,18 @@
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/deepFreeze.js" />
       <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/stack.js" />
-      <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/letvar.js" />
-      <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/index.js" />
       <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/binary.js" />
-      <root url="file://$PROJECT_DIR$/dist/freecodecamp/danmu/scripts/test.js" />
-      <root url="file://$PROJECT_DIR$/dist/freecodecamp/danmu/scripts/danmu.js" />
       <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/dates.js" />
       <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/array.js" />
-      <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/filter.js" />
       <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/test.js" />
+      <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/deepFreeze.js" />
+      <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/letvar.js" />
+      <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/freecodecamp/danmu/scripts/test.js" />
+      <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/entrust.js" />
+      <root url="file://$PROJECT_DIR$/dist/freecodecamp/danmu/scripts/danmu.js" />
+      <root url="file://$PROJECT_DIR$/dist/test/es6/scripts/filter.js" />
     </CLASSES>
     <SOURCES />
   </library>
