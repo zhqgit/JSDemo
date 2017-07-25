@@ -2,7 +2,7 @@
 <head>
     <title>9.3节,JS解析JSON数据</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=D874c49a728d76c2e075dd33658f0864"></script>
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=D874c49a728d76c2e075dd33658f0864"></script>-->
     <style type="text/css">
     </style>
 </head>
@@ -29,6 +29,7 @@
             }
 
             if ( window.JSON && window.JSON.parse ) {//如果存在原生的JSON解析API，则使用原生的解析API
+                // 将一个字符串解析为JSON，可选地转换生成的值及其属性，并返回值
                 return window.JSON.parse( jsonData );//解析JSON字符
             }
 
