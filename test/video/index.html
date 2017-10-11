@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #line {
+            width: 800px;
+            height: 40px;
+            opacity: 0;
+            background-color: rgba(48,40,44,.5);
+            position: relative;
+            top: -71px;
+            transition:opacity 0.2s;
+            -moz-transition:opacity 0.2s; /* Firefox 4 */
+            -webkit-transition:opacity 0.2s; /* Safari and Chrome */
+            -o-transition:opacity 0.2s; /* Opera */
+        }
+
+        #video:hover + #line {
+            opacity: 0.8;
+        }
+
+
+    </style>
+</head>
+<body>
+<!--<div class="container">-->
+<video width="800px" id="video" poster="images/video.png">
+    <source src="http://www.runoob.com/try/demo_source/movie.mp4">
+    你的浏览器不支持HTML5
+</video>
+<div id="line"></div>
+<!--</div>-->
+<br>
+<button id="play">播放</button>
+<button id="pause">暂停</button>
+<button id="go">快进2秒</button>
+<button id="back">快退2秒</button>
+<button id="speed-up">播放速度+</button>
+<button id="speed-down">播放速度-</button>
+<button id="voice-up">声音+</button>
+<button id="voice-down">声音-</button>
+<button id="muted">静音</button>
+<button id="muted-no">解除静音</button>
+<button id="full">全屏</button>
+</body>
+
+<script>
+    window.onload = function () {
+        var video = document.getElementById("video");
+        var line = document.getElementById("line");
+
+
+        var play = document.getElementById("play");
+        var pause = document.getElementById("pause");
+
+        var go = document.getElementById("go");
+        var back = document.getElementById("back");
+        var speedUp = document.getElementById("speed-up");
+        var speedDown = document.getElementById("speed-down");
+        var voiceUp = document.getElementById("voice-up");
+        var voiceDown = document.getElementById("voice-down");
+        var muted = document.getElementById("muted");
+        var mutedNo = document.getElementById("muted-no");
+        var full = document.getElementById("full");
+
+
+//        video.onmouseover = function () {
+//            line.style.display = "block";
+//        };
+//
+//        video.onmouseout = function () {
+//            line.style.display = "none";
+//        }
+
+        play.onclick = function () {
+            video.play();
+        };
+
+        pause.onclick = function () {
+            video.pause();
+        };
+
+        go.onclick = function () {
+            video.currentTime += 2;
+        };
+
+        back.onclick = function () {
+            video.currentTime -= 2;
+        };
+
+        speedUp.onclick = function () {
+            video.playbackRate += 2;
+        };
+
+        speedDown.onclick = function () {
+            video.playbackRate -= 2;
+        };
+
+        voiceUp.onclick = function () {
+            video.volume += 0.1;
+        };
+
+        voiceDown.onclick = function () {
+            video.volume -= 0.1;
+        };
+
+        muted.onclick = function () {
+            video.muted = true;
+        };
+
+        mutedNo.onclick = function () {
+            video.muted = false;
+        };
+
+        full.onclick = function () {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+
+            } else if (video.webkitEnterFullScreen) {
+                video.webkitEnterFullScreen();
+            } else if (video.mozRequestFullScreen) {
+                video.mozRequestFullScreen();
+            }
+        }
+
+    }
+</script>
+</html>

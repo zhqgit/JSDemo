@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: opacity 2s linear;
+            -moz-transition: opacity 2s linear;
+            -o-transition: opacity 2s linear;
+            transition: opacity 2s linear;
+            opacity:0;
+        }
+
+        .fadein{
+            opacity:1;
+            /*所有浏览器都支持 opacity 属性。*/
+            /*注释：IE8 以及更早的版本支持替代的 filter 属性。例如：filter:Alpha(opacity=50)。*/
+            /*filter:alpha(opacity=100);*/
+        }
+
+        #bg1 {
+            background: url(./images/oia.jpg) no-repeat;
+            background-size: cover;
+
+        }
+
+        #bg2 {
+            background: url(./images/beauty.jpg) no-repeat;
+            background-size: cover;
+        }
+
+        #bg3 {
+            background: url(./images/road.jpg) no-repeat;
+            background-size: cover;
+        }
+        #bg4 {
+            background: url(./images/urban.jpg) no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<div id="imgs">
+    <div id="bg1" class="bg"></div>
+    <div id="bg2" class="bg"></div>
+    <div id="bg3" class="bg"></div>
+    <div id="bg4" class="bg"></div>
+</div>
+
+<script>
+
+    /*
+    * @fn   使用切换css透明度不同的类来达到淡入淡出的效果
+    * @key  设置透明度不同的类；设置时间控制函数
+    *
+    * */
+
+   window.onload = function () {
+       // 替换class达到淡入淡出的效果
+       function fadeIn(e) {
+           e.className = "bg fadein"
+       };
+
+       function fadeOut(e) {
+           e.className = "bg"
+       };
+       //申明图片数组中当前的轮播图片
+       cur_img = document.getElementById("imgs").children.length - 1;
+       //图片轮播函数
+       function turnImgs(imgs) {
+           var imgs = document.getElementById("imgs").children;
+           if (cur_img == 0) {
+
+               // 如果只有一张图片
+               fadeOut(imgs[cur_img]);
+               cur_img = imgs.length - 1;
+               fadeIn(imgs[cur_img]);
+           } else {
+
+               // 多于一张图片
+               fadeOut(imgs[cur_img]);
+               fadeIn(imgs[cur_img - 1]);
+               cur_img--;
+           }
+       }
+       //设置轮播间隔
+       setInterval(turnImgs, 4000);
+   }
+</script>
+</body>
+</html>

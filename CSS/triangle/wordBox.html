@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 500px;
+            height: 500px;
+            position  : absolute;
+            top       : 50%;
+            left      : 50%;
+            transform : translate(-50%,-50%);
+        }
+        #square{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+
+
+            position  : absolute;
+            top       : 50%;
+            left      : 50%;
+            transform : translate(-50%,-50%);
+        }
+
+        #tangle1{
+            height: 0;
+            width: 0;
+            border-width: 19px 0 19px 19px;
+            border-color: transparent #000;
+            border-style: solid;
+        }
+
+        #tangle2{
+            height: 0;
+            width: 0;
+            border-width: 19px 0 19px 19px;
+            border-color: transparent #fff;
+            border-style: solid;
+            position: relative;
+            top: -38px;
+            left: -1px;
+        }
+
+        #tangle{
+            position: relative;
+            top: 210px;
+            left: 300px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="square"></div>
+    <div id="tangle">
+        <div id="tangle1"></div>
+        <div id="tangle2"></div>
+    </div>
+</div>
+
+</body>
+</html>

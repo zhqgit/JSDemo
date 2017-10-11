@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #tngle{
+            width: 0;
+            height: 0;
+
+            border-width: 50px 0px 50px 50px;
+            /*border-color：定义四个边框的颜色，*/
+            /*border-color: red transparent red transparent;*/
+            /*简写，上下边框为红色，左右边框为透明*/
+            border-color: transparent red;
+            border-style: solid;
+
+            border-radius: 5px;
+        }
+
+        #square{
+            width: 100px;
+            height: 100px;
+
+            background-color: red;
+            border-top: 50px solid bisque;
+            border-left: 50px solid cadetblue;
+            border-bottom: 50px solid magenta;
+            border-right: 50px solid aquamarine;
+
+        }
+
+        #square-no{
+            width: 0;
+            height: 0;
+
+            background-color: red;
+            border-top: 50px solid bisque;
+            border-left: 50px solid cadetblue;
+            border-bottom: 50px solid magenta;
+            border-right: 50px solid aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div id="tngle"></div>
+    <div id="square"></div>
+    <div id="square-no"></div>
+</body>
+</html>
