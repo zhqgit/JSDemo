@@ -1,6 +1,6 @@
 
 
-### 章节部分代码来源于[《超实用的JS代码段》](https://github.com/maomaoshu/jsBook)，其余的是自己写的
+### 章节部分代码来源于[《超实用的JS代码段》](https://github.com/maomaoshu/jsBook)，其余的是自己写的,我就测试一下
 
 ####第2章  表单常用代码
 * 2.1  去除字符串左右两边的空格
