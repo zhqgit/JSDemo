@@ -4,6 +4,8 @@
 /*
  * @fn 判断字母大小写
  * 1. 根据 charCodeAt('char') 返回的 Unicode 来判断
+ * 2. 直接让传进来的字符转化为大写，然后与原来的字符比较
+ * 3. 使用正则测试字符在大写字母区间还是小写字母区间
  * */
 
 function checkCharCase(str,num) {
